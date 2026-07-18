@@ -28,9 +28,23 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col p-0 m-0">
         <Navbar />
-        {children}
+        <div style={{ flex: 1 }}>
+          {children}
+        </div>
+        <footer style={{
+          background: '#001f3f',
+          color: '#8a9bb0',
+          textAlign: 'center',
+          padding: '24px 16px',
+          fontSize: '0.9rem',
+          marginTop: 'auto',
+          fontFamily: 'var(--font-geist-sans), sans-serif',
+        }}>
+          <p style={{ margin: '0 0 4px', fontWeight: 600, color: '#fff' }}>Daniel Vasquez - VV232745</p>
+          <p style={{ margin: 0 }}>DPS104 G03L</p>
+        </footer>
       </body>
     </html>
   );
